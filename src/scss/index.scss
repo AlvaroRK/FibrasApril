@@ -1,0 +1,35 @@
+@import './base/reset';
+
+@import './utils/mixins';
+
+@import './layout/header';
+@import './layout/main';
+@import './layout/footer';
+
+body{
+
+    .wave1{
+        position: absolute;
+        width: 85%;
+        right: 52rem;
+        z-index: -90;
+    }
+    .wave2{
+        position:absolute;
+        top:4rem;
+        z-index: -100;
+    }
+
+    .wave3{
+        position: absolute;
+        width: 65%;
+        left: 67.1rem;
+        z-index: -110;
+    }
+
+    .wave4{
+        position: absolute;
+        bottom:4rem;
+        z-index: -120;
+    }
+}

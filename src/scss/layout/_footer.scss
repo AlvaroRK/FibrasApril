@@ -1,0 +1,25 @@
+footer{
+    height: 10rem;
+    background-color: #010536;
+    @include flex(column, nowrap, center, center);
+    .footerP{
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+    .redes{
+
+        padding: 1rem;
+        @include flex(row, nowrap, space-between, center);
+
+        a{
+            margin: 0 1rem;
+
+            svg{
+                height: 1.7em;
+                fill: white;
+            }
+        }
+
+    }
+}

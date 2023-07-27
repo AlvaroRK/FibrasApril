@@ -1,0 +1,71 @@
+.header{
+    height: 4rem;
+    background-color: #010536;
+    color:white;
+  
+    @include flex( row , wrap , space-around , center );
+
+    @include media(){
+        padding:1em;
+    }
+    
+    .a{
+      img{
+        width: 14rem;
+      }
+    }
+
+    .button{
+      display: none;
+      cursor: pointer;
+  
+      @include media(){
+        display: block;
+      }
+    }
+    .svg{
+      width:2em;
+      height:2em;
+      fill:white;
+    }
+    
+    .nav{
+      
+      @include media(){
+        width:100%;
+        // display: none;
+        opacity: 0;
+        height:0vh;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .5s ease;
+        @include flex( column , nowrap , center , center );
+  
+        &.activo{
+          // display: flex;
+          opacity:1;
+          height:50vh;
+          pointer-events: auto;
+        }
+      }
+    }
+    .ul{
+      @include flex( row , wrap , flex-end , center );
+  
+      @include media(){ flex-direction: column; }
+    }
+    .li{
+      margin: 0 .5em;
+      @include media(){ margin: 1em 0; }
+
+      a{
+        padding: 10px;
+        
+        &.NavActivo, &:hover{
+          background-color: #FFFF00;
+          border-radius: 25px;
+          color: #010536;
+        }
+      }
+    }
+  }
