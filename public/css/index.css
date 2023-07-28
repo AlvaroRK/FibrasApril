@@ -219,17 +219,26 @@ body {
 }
 .header .li a {
   padding: 10px;
+  border-radius: 25px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
-.header .li a.NavActivo, .header .li a:hover {
+.header .li a.NavActivo {
   background-color: #FFFF00;
   border-radius: 25px;
   color: #010536;
 }
+.header .li a:hover {
+  background-color: #FFFF00;
+  color: #010536;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
 
 main {
   /* PARA QUE SIRVE */
-  /* CONTACTO */
   /* PRODUCTOS */
+  /* CONTACTO */
 }
 main .sectS {
   margin: 2rem 0;
@@ -279,7 +288,7 @@ main .sectP {
   background-color: #010536;
 }
 main .sectP .destacado {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0 0;
   text-align: center;
   color: white;
   font-size: 30px;
@@ -295,10 +304,23 @@ main .sectP .cardsContainer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 55vh;
+}
+main .sectP .cardsContainer button a {
+  border-radius: 50px;
+  padding: 1rem;
+  background-color: #FFFF00;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+main .sectP .cardsContainer button a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 main .sectP .cardsContainer .card {
   padding: 20px;
@@ -311,19 +333,29 @@ main .sectP .cardsContainer .card img {
   margin-bottom: 20px;
 }
 main .sectP .cardsContainer .card .cardText {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: black;
+  text-align: center;
 }
 main .sectP .cardsContainer .card .cardText .name {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
 }
 main .sectP .cardsContainer .card .cardText .desc {
   width: 100%;
-  height: 125px;
-}
-main .sectP .cardsContainer .card .cardText .price {
-  text-align: right;
 }
 main .sectC {
   height: 15vh;
@@ -349,6 +381,59 @@ main .sectC .btnContacto a {
   background-color: #010536;
   padding: 16px;
   border-radius: 25px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+main .sectC .btnContacto a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  main .sectS .contS {
+    width: 80%;
+  }
+  main .sectS .contS .slogan:nth-child(1) {
+    font-size: 25px;
+  }
+  main .sectS .contS .slogan:nth-last-child(1) {
+    font-size: 20px;
+  }
+  main .sectP .destacado {
+    font-size: 25px;
+  }
+  main .sectP .cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  main .sectP .cardsContainer .card {
+    margin: 1.5rem 0;
+    width: 90%;
+  }
+  main .sectC {
+    height: auto;
+  }
+  main .sectC .aviso {
+    font-size: 18px;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  main .sectC .btnContacto {
+    margin-bottom: 1rem;
+  }
 }
 main .uso {
   height: 40vh;
@@ -396,13 +481,257 @@ main .uso:nth-child(4) {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  margin-bottom: 18rem;
 }
 main .usoText {
   padding: 2rem;
   border-radius: 25px;
   width: 40%;
-  background-color: #289ead;
+  background-color: #010536;
+  color: #ffffff;
+  line-height: 2;
+}
+main .masUsos {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .masUsos p {
+  padding: 1rem 0.1rem 1rem 1rem;
+  background-color: #010536;
+  color: #ffffff;
+  border-radius: 25px 0 0 25px;
+}
+main .masUsos button a {
+  border-radius: 0 25px 25px 0;
+  background-color: #FFFF00;
+  padding: 1rem 0.1rem;
+}
+main .masUsos button a:hover {
+  -webkit-transform: scale(1.1) translateX(5px);
+          transform: scale(1.1) translateX(5px);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+@media screen and (max-width: 480px) {
+  main .uso {
+    height: auto;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .uso img {
+    width: 100%;
+    height: auto;
+    background-color: #969696;
+    margin-bottom: 1rem;
+  }
+  main .uso:nth-child(1) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .uso:nth-child(2) {
+    background-color: #010536;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .uso:nth-child(3) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .uso:nth-child(4) {
+    background-color: #010536;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .usoText {
+    width: auto;
+    padding: 1rem;
+  }
+  main .usoText p {
+    text-align: justify;
+  }
+  main .masUsos {
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: justify;
+  }
+  main .masUsos p {
+    border-radius: 25px;
+    padding: 1rem;
+  }
+  main .masUsos button a {
+    padding: 1rem;
+    border-radius: 25px;
+  }
+}
+main .prods {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 30px;
+}
+main .prodSection {
+  background-color: #010536;
+  margin: 1.5rem 5rem 5rem 5rem;
+  padding: 1.35rem;
+}
+main .prodSection h2 {
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 24px;
+  text-align: center;
+  background-color: #FFFF00;
+  padding: 1.5rem;
+  border-radius: 25px;
+}
+main .prodSection .prodContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+main .prodSection .prodContainer .prod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  border: 5px solid #ffffff;
+  width: 20%;
+  height: 25rem;
+}
+main .prodSection .prodContainer .prod img {
+  border-radius: 25px 25px 0 0;
+  height: 60%;
+}
+main .prodSection .prodContainer .prod .infoContain {
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .prodSection .prodContainer .prod .infoContain .largo, main .prodSection .prodContainer .prod .infoContain .peso {
+  background-color: #010536;
+  border-radius: 25px;
+  color: #ffffff;
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  main .prods {
+    font-size: 24px;
+  }
+  main .prodSection {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  main .prodSection .prodContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .prodSection .prodContainer .prod {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 main .contactoContainer {
   height: calc(100vh - 14rem);
@@ -468,54 +797,22 @@ main .contactoContainer .contactoBox .metodos a svg {
   width: 2em;
   fill: white;
 }
-main .prods {
-  text-align: center;
-  margin: 1.1rem 0;
-  font-size: 30px;
-}
-main .prodSection h2 {
-  color: rgb(0, 0, 0);
-  font-size: 24px;
-  text-align: center;
-  padding: 16px 0;
-}
-main .prodSection .prodContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2rem;
-}
-main .prodSection .prodContainer .prod {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 5px solid #010536;
-  border-radius: 5px;
-  width: 20%;
-  height: 25rem;
-}
-main .prodSection .prodContainer .prod .largo, main .prodSection .prodContainer .prod .peso {
-  text-align: center;
+@media screen and (max-width: 480px) {
+  main .contactoContainer {
+    height: 80vh;
+    padding: 1rem 0;
+  }
+  main .contactoContainer .contactoBox {
+    padding: 1rem;
+    text-align: center;
+    width: 90%;
+  }
+  main .contactoContainer .contactoBox h2 {
+    font-size: 32px;
+  }
+  main .contactoContainer .contactoBox p {
+    font-size: 18px;
+  }
 }
 
 footer {
@@ -577,8 +874,8 @@ body .wave2 {
 }
 body .wave3 {
   position: absolute;
-  width: 65%;
-  left: 67.1rem;
+  width: 50%;
+  left: 67.6rem;
   z-index: -110;
 }
 body .wave4 {
