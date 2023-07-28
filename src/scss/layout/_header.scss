@@ -6,7 +6,7 @@
     @include flex( row , wrap , space-around , center );
 
     @include media(){
-        padding:1em;
+        padding:1rem 0;
     }
     
     .a{
@@ -43,6 +43,8 @@
   
         &.activo{
           // display: flex;
+          background-color: #010536;
+          z-index: 1000;
           opacity:1;
           height:50vh;
           pointer-events: auto;

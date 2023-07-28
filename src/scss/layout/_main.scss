@@ -207,6 +207,7 @@ main {
   }
 
   .usoText{
+    text-align: justify;
     padding: 2rem;
     border-radius: 25px;
     width: 40%;
@@ -274,10 +275,6 @@ main {
   .usoText{
     width: auto;
     padding: 1rem;
-
-    p{
-      text-align: justify;
-    }
   }
 
   .masUsos{

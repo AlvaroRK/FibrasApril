@@ -137,7 +137,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .header {
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 .header .a img {
@@ -181,6 +181,8 @@ body {
             align-items: center;
   }
   .header .nav.activo {
+    background-color: #010536;
+    z-index: 1000;
     opacity: 1;
     height: 50vh;
     pointer-events: auto;
@@ -483,6 +485,7 @@ main .uso:nth-child(4) {
           flex-direction: row-reverse;
 }
 main .usoText {
+  text-align: justify;
   padding: 2rem;
   border-radius: 25px;
   width: 40%;
@@ -576,9 +579,6 @@ main .masUsos button a:hover {
   main .usoText {
     width: auto;
     padding: 1rem;
-  }
-  main .usoText p {
-    text-align: justify;
   }
   main .masUsos {
     padding: 1rem;
