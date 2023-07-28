@@ -804,6 +804,49 @@ footer .redes a svg {
   fill: white;
 }
 
+.mainPriv {
+  padding: 1rem 2rem;
+  width: 60%;
+  margin: 2rem auto;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.mainPriv h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.mainPriv p {
+  text-align: justify;
+  margin: 1rem 0;
+}
+.mainPriv h3 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.mainCookies {
+  padding: 1rem 2rem;
+  width: 60%;
+  margin: 2rem auto;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.mainCookies h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.mainCookies p {
+  text-align: justify;
+  margin: 1rem 0;
+}
+.mainCookies ul li {
+  list-style: circle;
+}
+.mainCookies h3 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
 body .wave1 {
   position: absolute;
   width: 85%;
