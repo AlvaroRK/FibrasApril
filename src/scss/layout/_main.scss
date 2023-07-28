@@ -39,6 +39,9 @@ main {
       height: 55vh;
 
       button{
+        font-size: 16px;
+        border: none;
+        background: none;
 
         a{
           border-radius: 50px;
@@ -90,6 +93,9 @@ main {
     }
 
     .btnContacto{
+      font-size: 16px;
+        border: none;
+        background: none;
         a{
             color: #FFFF00;
             background-color: #010536;
@@ -155,28 +161,6 @@ main {
   }
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /* PARA QUE SIRVE */
     
@@ -228,7 +212,10 @@ main {
     }
     
     button{
+      border: none;
+      background: none;
       a{
+        font-size: 16px;
         border-radius: 0 25px 25px 0;
         background-color: #FFFF00;
         padding: 1rem .1rem;
@@ -240,7 +227,6 @@ main {
       }
     }
   }
-
 
 
 @include media(){
@@ -295,21 +281,6 @@ main {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -371,7 +342,6 @@ main {
   }
 
 
-
   @include media(){
     .prods{
       font-size: 24px;
@@ -393,21 +363,6 @@ main {
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
